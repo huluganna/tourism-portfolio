@@ -70,14 +70,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const name = document.getElementById("name").value.trim();
         const email = document.getElementById("email").value.trim();
+        const mobile = document.getElementById("mobile").value.trim();
         const rating = document.getElementById("rating").value;
         const message = document.getElementById("message").value.trim();
 
-        if (!name || !email || !rating || !message) {
-            status.textContent = "Please fill all fields!";
+        
+         if (!name || !email || !mobile || !rating || !message) {
+            status.textContent = "Please fill all required fields.";
             status.style.color = "red";
             return;
         }
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+            status.textContent = "Please enter a valid email address.";
+            status.style.color = "red";
+            return;
+        }
+        const mobilePattern = /^[6-9]\d{9}$/;
+        if (!mobilePattern.test(mobile)) {
+            status.textContent = "Please enter a valid 10-digit mobile number.";
+            status.style.color = "red";
+            return;
+        }
+        
 
         const feedbackText =
 `TravelVista Feedback
