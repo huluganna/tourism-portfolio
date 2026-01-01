@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">TravelVista</div>
+    <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#feedback">Feedback</a></li>
+    </ul>
+</header>
+
+<section id="hero" class="hero">
+    <div class="hero-content">
+        <h1>Explore the World</h1>
+        <p>Select destinations and calculate total cost</p>
+    </div>
+</section>
+
+<section id="destinations" class="section">
+    <div class="container">
+        <h2>Select Destinations</h2>
+
+        <div class="destination-grid">
+
+            <div class="destination-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Tour_Eiffel_Wikimedia_Commons.jpg">
+                <h3>Paris, France</h3>
+                <p>₹80,000</p>
+                <input type="checkbox" class="place" data-name="Paris, France" data-price="80000">
+            </div>
+
+            <div class="destination-card">
+                <img src="https://www.hostelworld.com/blog/wp-content/uploads/dreamstimesmall_322299871.jpg">
+                <h3>Bali, Indonesia</h3>
+                <p>₹60,000</p>
+                <input type="checkbox" class="place" data-name="Bali, Indonesia" data-price="60000">
+            </div>
+
+            <div class="destination-card">
+                <img src="https://media.digitalnomads.world/wp-content/uploads/2021/02/20120635/tokyo-for-digital-nomads.jpg">
+                <h3>Tokyo, Japan</h3>
+                <p>₹90,000</p>
+                <input type="checkbox" class="place" data-name="Tokyo, Japan" data-price="90000">
+            </div>
+
+            <div class="destination-card">
+                <img src="https://www.travelingtoworld.com/wp-content/uploads/2017/01/coorg-tourist-places.jpg">
+                <h3>Coorg, Karnataka</h3>
+                <p>₹15,000</p>
+                <input type="checkbox" class="place" data-name="Coorg, Karnataka" data-price="15000">
+            </div>
+
+            <div class="destination-card">
+                <img src="https://cdn.britannica.com/27/242227-050-48358A10/Mysore-Palace-Mysuru-Karnataka-India.jpg">
+                <h3>Mysore Palace, Karnataka</h3>
+                <p>₹5,000</p>
+                <input type="checkbox" class="place" data-name="Mysore Palace, Karnataka" data-price="5000">
+            </div>
+
+            <div class="destination-card">
+                <img src="https://assets-news.housing.com/news/wp-content/uploads/2022/08/31020547/places-to-visit-in-hampi-FEATURE-compressed.jpg">
+                <h3>Hampi, Karnataka</h3>
+                <p>₹3,000</p>
+                <input type="checkbox" class="place" data-name="Hampi, Karnataka" data-price="3000">
+            </div>
+
+            <div class="destination-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Taj-Mahal.jpg">
+                <h3>TajMahal,Agra</h3>
+                <p>₹30,000</p>
+                <input type="checkbox" class="place" data-name="TajMahal,Agra" data-price="30000">
+            </div>
+
+            <div class="destination-card">
+                <img src="https://static.toiimg.com/thumb/115224983/Jaipur.jpg?width=636&height=358&resize=4">
+                <h3>Jaipur,Rajasthan</h3>
+                <p>₹20,000</p>
+                <input type="checkbox" class="place" data-name="Jaipur,Rajasthan" data-price="20000">
+            </div>
+
+
+        </div>
+
+        <!-- Guide Selection -->
+        <div class="guide-box">
+            <h3>Additional Services</h3>
+            <label>
+                <input type="checkbox" id="guide" data-price="5000">
+                Travel Guide – ₹5,000
+            </label>
+        </div>
+
+        <!-- Summary -->
+        <div class="summary">
+            <h3>Selected Items</h3>
+            <ul id="selectedPlaces"></ul>
+            <h3>Total Amount: ₹<span id="totalAmount">0</span></h3>
+            <button id="confirmBooking">Confirm Booking</button>
+            <p id="bookingStatus"></p>
+        </div>
+
+    </div>
+</section>
+
+<section id="feedback" class="section">
+    <div class="container">
+        <h2>Feedback</h2>
+
+        <form id="feedbackForm">
+
+    <div>
+        <label>name</label><br>
+        <input type="text" id="name" required>
+    </div>
+
+    <div>
+        <label>email</label><br>
+        <input type="email" id="email" required>
+    </div>
+
+    <div>
+        <label>rating</label><br>
+        <select id="rating" required>
+            <option value="">Select</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+    </div>
+
+    <div>
+        <label>message</label><br>
+        <textarea id="message" required></textarea>
+    </div>
+
+    <button type="submit">Submit</button>
+    <pre id="feedbackStatus"></pre>
+
+</form>
+
+
+        
+    </div>
+</section>
+
+
+<footer class="footer">
+    <p>© 2025 TravelVista Tourism Portfolio</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
