@@ -5,39 +5,6 @@
     font-family: Arial, sans-serif;
 }
 
-body {
-    background: #eef7f1;
-     
-}
-
-.navbar {
-    background: white;
-    padding: 15px 7%;
-    display: flex;
-    justify-content: space-between;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #1d4ed8;
-}
-
-.hero {
-    height: 55vh;
-    background: url("https://images.unsplash.com/photo-1501785888041-af3ef285b470") center/cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-}
-
 .hero-content {
     background: rgba(0,0,0,0.5);
     padding: 20px;
